@@ -29,7 +29,21 @@ This service does the following tasks:
     }
     ```
 
-## Command to test
+## Deployment
+
+First you need to deploy the database using the following command in `./docker` folder:
+
+```shell
+docker-compose up -d
+```
+
+Then you have to start the app at `./`:
+
+```shell
+go run .
+```
+
+Finally, test the server with:
 
 ```shell
 curl --header "Content-Type: application/json" \
@@ -38,5 +52,4 @@ curl --header "Content-Type: application/json" \
     http://localhost:8080/echo
 ```
 
-Finally, you can observe the DB through its interactive page at http://localhost:8529. Login using "root" for the
-username and "test" for the password.
+> *Note*: you can observe the DB through its interactive page at http://localhost:8529. Login using "root" for the username and "test" for the password.
